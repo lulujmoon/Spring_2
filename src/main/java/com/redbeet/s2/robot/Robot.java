@@ -7,12 +7,28 @@ import org.springframework.stereotype.Component;
 @Component
 public class Robot {
 	
-	@Autowired
-	@Qualifier("al")
+	private int age;
+	
+	private String name;
+	
+	private int price;
+
 	private Arm arm_Left;
-	@Autowired
-	@Qualifier("ar")
+
 	private Arm arm_Right;
+	
+
+	public Robot() {
+		
+	}
+	
+	public Robot(int age, String name, int price) {
+		this.age=age;
+		this.name=name;
+		this.price=price;
+	}
+	
+	
 	
 	public Arm getArm_Left() {
 		return arm_Left;
@@ -26,6 +42,8 @@ public class Robot {
 	public void setArm_Right(Arm arm_Right) {
 		this.arm_Right = arm_Right;
 	}
+
+	
 	
 
 	

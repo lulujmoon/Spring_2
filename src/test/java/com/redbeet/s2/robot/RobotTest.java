@@ -14,13 +14,13 @@ public class RobotTest {
 
 	@Autowired
 	private Robot robot;
-	
-	
-	
+//	private Arm_Left arm_Left;
+   
 	@Test
 	public void test() {
-		System.out.println(robot.getArm_Left().getName());
-		System.out.println(robot.getArm_Right().getName());
+		assertNotNull(robot.getArm_Left());
+		assertNotNull(robot.getArm_Right());
 	}
-   
+	
+	
 }
